@@ -27,7 +27,7 @@ h2 {
     margin: 0;
     padding: 0;
     background-color: #00315e;
-    display: flex;
+    /* display: flex; */
 }
 
 .navigation a {
@@ -62,18 +62,32 @@ footer {
 
 /* This rule is for the <div> that encloses the whole page */
 .page-container {
-    width: 90%;
     padding: 0.5em;
     background-color: #ffffff;
-    margin: 0 auto;
+
+}
+
+@media screen and (min-width: 37.5em) {
+    .page-container {
+        width: 90%;
+        margin: 0 auto;
+
+    }
 }
 
 /* This rule is for the main content of the page */
 main {
     padding: 2em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2em; /* Make space between the columns */
+
+}
+
+@media screen and (min-width: 37.5em) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2em;
+        /* Make space between the columns */
+    }
 }
 
 /* This grouped selector rule applies to both of the "regions" */
@@ -88,8 +102,22 @@ main {
     /* pale peach/orange */
 }
 
+@media screen and (max-width: 37.5em) {
+    .html-feature {
+        margin-bottom: 1em;
+    }
+
+}
+
 /* This rule is for the CSS article */
 .css-feature {
     background-color: #FFF59C;
     /* pale yellow */
+}
+
+@media screen and (min-width: 30em) {
+    .navigation {
+        display: flex;
+    }
+
 }
